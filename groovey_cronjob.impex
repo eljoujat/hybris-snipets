@@ -1,0 +1,9 @@
+
+## First create the media that will hold the groovey script
+INSERT_UPDATE Media			 ; code[unique=true]; realfilename; @media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator];mime[default='groovey']
+							 ;script_001; script_001; script_001.groovey;
+
+
+#The create the cronjon
+INSERT_UPDATE MediaConversionCronJob;code[unique=true];grooveyscript(code);
+;customGrooveyCronJob_001;customGrooveyJob;script_001;
